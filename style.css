@@ -31,6 +31,7 @@ header {
     width: 100%;
     border-bottom: 3px solid var(--brand-secondary);
     position: sticky;
+    position: -webkit-sticky; /*til safari*/
     top: -18.5rem;
 }
 
