@@ -4,12 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="coffee bar, landing page, info website">
-    <meta name="describtion" content="this page functions as a landing page for the danish coffee bar located in Koege, named Koeges kaffebar">
+    <meta name="description" content="this page functions as a landing page for the danish coffee bar located in Koege, named Koeges kaffebar">
     <title>Køges Kaffebar</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    
+    <header>
+        <a class="nav-logo-link" href=""><img class="nav-logo-img" src="./images/logo.svg" alt=""></a>
+
+        <div onclick="openNav()" class="burger">
+            <div class="nav-burger-line"></div>
+            <div class="nav-burger-line"></div>
+            <div class="nav-burger-line"></div>        
+        </div>
+
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="http://hjorthex.dk/volta">home</a>
+            <a href="http://andonovska.dk/volta">sign in</a>
+            <a href="http://boldenst.dk/volta">build your volta</a>     
+            <a href="http://lauramedie.dk/volta">contact</a>
+            <a href="http://tobyqvist.dk/volta">about us</a>
+          </div>
+    </header>
+          <div class="nav-sticky-img"></div>
+
+    <section></section>
+
+<script src="script.js"></script>
 </body>
 </html>
