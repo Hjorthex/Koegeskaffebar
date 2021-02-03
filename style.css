@@ -60,6 +60,7 @@ header {
 }
 
 .facebook-icon {
+    z-index: 4;
     position: fixed;
     width: 3rem;
     top: 0.7rem;
@@ -87,6 +88,8 @@ header {
     transition: 0.4s;
     padding-top: 60px;
     z-index: 3;
+    display: flex;
+    flex-direction: column;
 }
 
 .sidenav a {
@@ -113,6 +116,21 @@ header {
     font-size: 8ch;
 
 }
+
+.logo-nav-container {
+    width: 20rem;
+    align-self: center;
+    display: flex;
+    border-bottom: 3px solid var(--brand-secondary);
+    margin-bottom: 1rem;
+}
+
+.logo-nav-burger {
+    width: 10rem;
+    align-self: center;
+    margin: 2rem auto 0.8rem auto;
+}
+
 
 
 
