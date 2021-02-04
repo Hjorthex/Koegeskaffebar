@@ -4,12 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="coffee bar, landing page, info website">
-    <meta name="describtion" content="this page functions as a landing page for the danish coffee bar located in Koege, named Koeges kaffebar">
+    <meta name="description" content="this page functions as a landing page for the danish coffee bar located in Koege, named Koeges kaffebar">
     <title>Køges Kaffebar</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    
+    <header>
+        <a class="nav-logo-link" href="index.html"><img class="nav-logo-img" src="./images/logo.svg" alt="koegeskaffebar-logo"></a>
+        <a target="blank" href="https://www.facebook.com/koegeskaffebar"><img class="facebook-icon" src="./images/facebook-icon.svg" alt="facebook"></a>
+        <div onclick="openNav()" class="burger">
+            <div class="nav-burger-line"></div>
+            <div class="nav-burger-line"></div>
+            <div class="nav-burger-line"></div>        
+        </div>
+        <nav class="nav-responsive-list">
+            <ul class="nav-list-horizontal">
+                <li><a href="index.html">Hjem</a></li>
+                <li><a href="concept.html">Koncept</a></li>
+                <li><a href="gallery.html">Galleri</a></li>
+                <li><a href="news.html">Nyheder</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+        </nav>
+
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="logo-nav-container">
+            <img class="logo-nav-burger" src="./images/logo.svg" alt="">
+            </div>
+            <a href="index.html">Hjem</a>
+            <a href="concept.html">Koncept</a>
+            <a href="gallery.html">Galleri</a>     
+            <a href="news.html">Nyheder</a>
+            <a href="contact.html">Kontakt</a>
+          </div>
+    </header>
+    <section class="landing-sect-links">
+        <a class="link-concept landing-div-links" href="concept.html">
+            <div class="landing_links--resize">
+                <h2>Brygget på <br> økologi</h2>
+            <p>Se vores udvalg</p>
+            </div>
+        </a>
+
+        <a class="link-news landing-div-links" href="">
+            <div class="landing_links--resize">
+                <h2>Nyt i<br>kaffebaren</h2>
+            </div>
+        </a>
+        <a class="link-baristas landing-div-links" href="">
+            <div class="link-baristas landing_links--resize">
+            <h2>Vores<br>engagerede<br>baristaer</h2>
+        </div></a>
+        <a class="link-decor landing-div-links" href="">
+            <div class="landing_links--resize">
+                <h2>Sådan <br> indretter <br> vi os</h2>
+            </div>
+        </a>
+        <a class="link-gallery landing-div-links" href="">
+            <h2 class="landing_gallery_title">Galleri</h2>
+
+            <div class="container_landing_gallery landing_links--resize">
+                <div class="couch"></div>
+                <div class="shop"></div>
+                <div class="coffee"></div>
+                <div class="barista"></div>                
+             </div>  
+        </div>
+        </a>
+        <a class="link-contact landing-div-links" href="">
+            <div class="landing_links--resize">
+                <h2>Kontakt os</h2>
+            </div>
+        </a>
+        <a class="link-location landing-div-links" href="">
+            <div class="landing_links--resize">
+                <h2>Find os her</h2>
+            </div>
+        </a>
+    </section>
+
+
+<script src="script.js"></script>
 </body>
 </html>
