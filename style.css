@@ -605,6 +605,9 @@ header {
     width: 2.5rem;
     margin-right: 1rem;
 }
+.some__text--shorten {
+    width: 15rem;
+}
 
 
 .contact__phone {
@@ -847,6 +850,84 @@ header {
         padding-right: 1rem;
     }
 
+    /* CONTACT */
+    .contact-container {
+        margin-top: 3rem;
+        display: grid;
+        grid-template-columns: 8vw 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 8vw;
+        grid-template-rows: auto;
+        grid-template-areas:
+            ". mail mail mail mail mail hours hours hours ."
+            ". mail mail mail mail mail . . . ."
+            ". some some some some some call call call ."
+            ". . . . . . call call call ."
+            ". location location location location location location location location .";
+    } 
+
+    .contact__open-hours {
+        margin-top: 0;
+        grid-area: hours;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "heading heading heading heading"
+            "text text text text";
+    }
+    
+    .open-hours__text {
+        line-height: 2.2;
+    }
+    
+    .contact__form {
+        grid-area: mail;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "heading heading heading heading heading"
+            "text text text text ."
+            "form form form form .";
+    }
+
+    .contact__some {
+        grid-area: some;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "heading heading heading heading heading"
+            "text text text text ."
+            "icon icon icon icon .";
+    }
+    
+    .contact__some__link {
+        justify-self: left;
+        grid-area: icon;
+        display: flex;
+        margin-top: 2rem;
+        align-items: left;
+        font-size: 1.2em;
+        color: #fff;
+    }
+    
+    .contact__icon__fb {
+        width: 2.5rem;
+        margin-right: 1rem;
+    }
+    
+    
+    .contact__phone {
+        grid-area: call;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "heading heading heading heading"
+            "text text text text"
+            "icon icon icon icon";
+    }
+
 }
 
 
@@ -987,5 +1068,34 @@ header {
 
     .concept__text--flipped {
         font-size: 1.15em;
+    }
+
+    .some__text--shorten {
+        width: auto;
+    }
+
+    /* Contact */
+    .contact-container {
+        margin-top: 3rem;
+        display: grid;
+        grid-template-columns: 15.6vw 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 15.6vw;
+        grid-template-rows: auto;
+        grid-template-areas:
+            ". mail mail mail mail mail hours hours hours ."
+            ". mail mail mail mail mail . . . ."
+            ". some some some some some call call call ."
+            ". . . . . . call call call ."
+            ". location location location location location location location location .";
+    } 
+
+    .contact__form {
+        grid-area: mail;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "heading heading heading heading heading heading"
+            "text text text text text ."
+            "form form form form . .";
     }
 }
