@@ -9,6 +9,10 @@
     padding: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
 :root {
     --brand-primary: #161616;
     --brand-secondary: #6EAA59;
@@ -33,6 +37,7 @@ header {
     position: sticky;
     position: -webkit-sticky; /*til safari*/
     top: -18.5rem;
+    z-index: 2;
 }
 
 .nav-logo-link {
@@ -135,9 +140,229 @@ header {
 
 
 
-section {
-    height: 150vh;
+
+
+
+
+/* Landing page */
+
+.landing-sect-links {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    width: 100%;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 8vw 1fr 1fr 1fr 1fr 8vw;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    ". concept concept concept concept ."
+    ". news news news news ."
+    ". barista barista barista barista ."
+    ". decor decor decor decor ."
+    ". gallery gallery gallery gallery ."
+    ". contact contact contact contact ."
+    ". location location location location .";
 }
+
+/* .landing-sect-links div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+} */
+
+.landing-sect-links div h2 {
+    color: #fff;
+    font-weight: normal;
+    align-self: center;
+    text-align: center;
+    font-size: 1.9em;
+}
+.landing-sect-links p {
+    color: #fff;
+    text-align: center;
+    font-size: 1em;
+    position: absolute;
+    margin-top: 13rem;
+}
+
+.landing-div-links {
+    width: 100%;
+}
+
+.link-concept {
+    grid-area: concept;
+    height: 15rem;
+}
+
+.link-news {
+    grid-area: news;
+    height: 15rem;
+}
+
+.link-baristas {
+    grid-area: barista;
+    height: 15rem;
+}
+
+.link-decor {
+    grid-area: decor;
+    height: 15rem;
+}
+
+
+
+.link-contact {
+    grid-area: contact;
+    height: 7.5rem;
+}
+
+.link-location {
+    grid-area: location;
+    height: 7.5rem;
+}
+
+.link-concept div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-image: url(./images/koncept.png);
+    background-size: 140%;
+    background-position: right bottom;
+}
+
+.link-news div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-image: url(./images/coffeebar.jpg);
+    background-size: cover;
+}
+
+.link-baristas div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-image: url(./images/baristaerne.png);
+    background-size: cover;
+}
+
+.link-decor div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-image: url(./images/Nyheder.png);
+    background-size: cover;
+}
+
+
+
+.landing_gallery_title {
+    color: #fff;
+    position: absolute;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    font-size: 1.9em;
+    font-weight: normal;
+    z-index: 5;
+}
+
+.link-gallery {
+    grid-area: gallery;
+    height: 15rem;
+    display: flex;
+    justify-content: center;
+}
+
+.container_landing_gallery {
+    width: 100%;
+    height: 100%;
+    gap: 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "couch shop shop"
+    "coffee coffee barista";
+}
+
+.couch {
+    grid-area: couch;
+    background-color: rgb(138, 138, 103);
+}
+
+.shop {
+    grid-area: shop;
+    background-color: rgb(138, 138, 103);
+}
+
+.coffee {
+    grid-area: coffee;
+    background-color: rgb(138, 138, 103);
+}
+
+.barista {
+    grid-area: barista;
+    background-color: rgb(138, 138, 103);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.link-contact div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-image: url(./images/kontakt.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.link-location div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-image: url(./images/location.png);
+    background-size: cover;
+    background-position: center;
+}
+
 
 @media only screen and (min-width: 700px) {
     header {
@@ -157,7 +382,9 @@ section {
         width: 100%;
     }
     .facebook-icon {
-        position: absolute;
+        position: fixed;
+        top: 1.05rem;
+        left: 1.2rem;
     }
     .burger {
         display: none;
@@ -182,7 +409,65 @@ section {
         color: #fff;
         font-size: 1.3em;
     }
+
+/* Landing */
+
+.landing-sect-links {
+    grid-template-columns: 8vw 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 8vw;
+    grid-template-areas: 
+    ". concept concept concept concept concept concept concept concept ."
+    ". news news news news news news news news ."
+    ". barista barista barista barista decor decor decor decor ."
+    ". gallery gallery gallery gallery gallery gallery gallery gallery ."
+    ". contact contact contact contact contact contact contact contact ."
+    ". location location location location location location location location .";
 }
+
+
+
+.landing-sect-links div h2 {
+    font-size: 1.9em;
+}
+.landing-sect-links p {
+    font-size: 1.4em;
+    margin-top: 17.5rem;
+}
+
+.link-concept {
+    height: 20rem;
+}
+
+.link-concept div {
+    background-size: 110%;
+}
+
+.link-news {
+    height: 12rem;
+}
+
+.link-baristas {
+    height: 12rem;
+}
+
+.link-decor {
+    height: 12rem;
+}
+
+.link-gallery {
+    height: 20rem;
+}
+
+.link-contact {
+    height: 10rem;
+}
+
+.link-location {
+    height: 10rem;
+}
+
+
+}
+
 
 @media only screen and (min-width: 1366px) {
     header {
@@ -195,14 +480,15 @@ section {
     }
     
     .nav-logo-link {
-        left: 14rem;
+        left: 15.5vw;
         top: 12rem;
         width: auto;
     }
 
     .facebook-icon {
+        position: absolute;
         left: auto;
-        right: 12rem;
+        right: 12vw;
         top: 16rem;
     }
     
@@ -215,7 +501,7 @@ section {
         margin: 0;
         width: auto;
         top: 16.5rem;
-        right: 16rem;
+        right: 16vw;
     }
 
     .nav-list-horizontal {
@@ -236,4 +522,63 @@ section {
         color: var(--brand-secondary);
     }
 
+/* Landing */
+
+
+    .landing-sect-links {
+        gap: 1.5rem;
+        grid-template-columns: 14vw 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 14vw;
+        grid-template-areas: 
+        ". concept concept concept concept concept concept concept concept concept concept concept concept ."
+        ". news news news news barista barista barista barista decor decor decor decor ."
+        ". gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery ."
+        ". contact contact contact contact contact contact location location location location location location .";
+    }
+    
+
+    .landing_links--resize:hover {
+        transform: scale(1.01);
+        transition-duration: 0.2s;
+    }
+    
+    .landing-sect-links div h2 {
+        font-size: 3em;
+    }
+    .landing-sect-links p {
+        font-size: 2em;
+        margin-top: 26rem;
+    }
+    
+    .link-concept {
+        height: 30rem;
+    }
+    
+    .link-concept div {
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .link-news {
+        height: 23rem;
+    }
+    
+    .link-baristas {
+        height: 23rem;
+    }
+    
+    .link-decor {
+        height: 23rem;
+    }
+    
+    .link-gallery {
+        height: 30rem;
+    }
+    
+    .link-contact {
+        height: 16rem;
+    }
+    
+    .link-location {
+        height: 16rem;
+    }
 }
