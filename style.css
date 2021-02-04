@@ -11,6 +11,26 @@
     -webkit-tap-highlight-color: transparent;
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--brand-primary);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #555;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
 a {
     text-decoration: none;
 }
@@ -508,11 +528,11 @@ header {
     padding-bottom: 0.3rem;
     margin-bottom: 1rem;
     border: 2px solid #fff;
-    background-color: transparent;
+    background-color: #0a0a0a;
 }
 
 .contact-form input:active {
-    background-color: transparent;
+    background-color: #0a0a0a;
 }
 
 .contact-form textarea {
@@ -523,7 +543,7 @@ header {
     border-radius: 0.4rem;
     padding-top: 0.2rem;
     padding-bottom: 5rem;
-    background-color: transparent;
+    background-color: #0a0a0a;
     border: 2px solid #fff;
     resize: none;
 
@@ -546,6 +566,13 @@ header {
     font-weight: 500;
     font-size: 1.9ch;
 
+}
+
+.contact-form button:hover {
+    background-color: #000;
+    border: 2px solid var(--brand-secondary);
+    cursor: pointer;
+    transform: scale(1.01);
 }
 
 ::placeholder {
