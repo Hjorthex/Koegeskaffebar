@@ -7,6 +7,8 @@
     font-family: century-gothic;
     margin: 0;
     padding: 0;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
 }
 
 a {
@@ -35,7 +37,8 @@ header {
     width: 100%;
     border-bottom: 3px solid var(--brand-secondary);
     position: sticky;
-    position: -webkit-sticky; /*til safari*/
+    position: -webkit-sticky;
+    /*til safari*/
     top: -18.5rem;
     z-index: 6;
 }
@@ -154,14 +157,14 @@ header {
     gap: 1rem;
     grid-template-columns: 8vw 1fr 1fr 1fr 1fr 8vw;
     grid-template-rows: auto;
-    grid-template-areas: 
-    ". concept concept concept concept ."
-    ". news news news news ."
-    ". barista barista barista barista ."
-    ". decor decor decor decor ."
-    ". gallery gallery gallery gallery ."
-    ". contact contact contact contact ."
-    ". location location location location .";
+    grid-template-areas:
+        ". concept concept concept concept ."
+        ". news news news news ."
+        ". barista barista barista barista ."
+        ". decor decor decor decor ."
+        ". gallery gallery gallery gallery ."
+        ". contact contact contact contact ."
+        ". location location location location .";
 }
 
 /* .landing-sect-links div {
@@ -177,6 +180,7 @@ header {
     text-align: center;
     font-size: 1.9em;
 }
+
 .landing-sect-links p {
     color: #fff;
     text-align: center;
@@ -286,9 +290,9 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
-    "couch shop shop"
-    "coffee coffee barista";
+    grid-template-areas:
+        "couch shop shop"
+        "coffee coffee barista";
 }
 
 .couch {
@@ -334,78 +338,309 @@ header {
 }
 
 /* Concept */
+.concept-container {
+    display: grid;
+    grid-template-columns: 8vw 1fr 1fr 8vw;
+    grid-template-rows: auto;
+    grid-template-areas:
+        ". concept concept ."
+        ". coffee coffee ."
+        ". barista barista ."
+        ". interior interior .";
+}
+
 .concept--top {
     margin-top: 2rem;
+    grid-area: concept;
+}
+
+.concept--mid {
+    grid-area: coffee;
+}
+
+.concept--flipped--mid {
+    grid-area: barista;
+}
+
+.concept--flipped--bottom {
+    grid-area: interior;
 }
 
 .concept {
-width: 100%;
-margin-bottom: 4rem;
-display: grid;
-grid-template-columns: 7vw 1fr 1fr 1fr 1fr 7vw;
-grid-template-rows: auto;
-grid-template-areas: 
-". image image image image ."
-". heading heading heading heading ."
-". text text text text .";
+    width: 100%;
+    margin-bottom: 4rem;
+    gap: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "image image image image"
+        "heading heading heading heading"
+        "text text text text";
 }
 
-.concept__prices {
-
-}
+.concept__prices {}
 
 .concept__image {
-grid-area: image;
-width: 100%;
+    grid-area: image;
+    width: 100%;
 }
 
 .concept__headline {
-grid-area: heading;
-border-bottom: 3px solid var(--brand-secondary);
-color: #fff;
-margin: 1rem 0;
-padding-bottom: 0.3rem;
-font-weight: normal;
-}
-
-.concept__text {
-grid-area: text;
-color: #fff;
-font-weight: normal;
-}
-
-.concept--flipped {
-    width: 100%;
-    margin-bottom: 4rem;
-    display: grid;
-    grid-template-columns: 7vw 1fr 1fr 1fr 1fr 7vw;
-    grid-template-rows: auto;
-    grid-template-areas: 
-    ". image image image image ."
-    ". heading heading heading heading ."
-    ". text text text text .";
-    }
-    
-    
-    .concept__image--flipped {
-    grid-area: image;
-    width: 100%;
-    }
-    
-    .concept__headline--flipped {
     grid-area: heading;
     border-bottom: 3px solid var(--brand-secondary);
     color: #fff;
     margin: 1rem 0;
     padding-bottom: 0.3rem;
     font-weight: normal;
-    }
-    
-    .concept__text--flipped {
+}
+
+.concept__text {
     grid-area: text;
     color: #fff;
     font-weight: normal;
-    }
+}
+
+.concept--flipped {
+    width: 100%;
+    margin-bottom: 4rem;
+    gap: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "image image image image"
+        "heading heading heading heading"
+        "text text text text";
+}
+
+
+.concept__image--flipped {
+    grid-area: image;
+    width: 100%;
+}
+
+.concept__headline--flipped {
+    grid-area: heading;
+    border-bottom: 3px solid var(--brand-secondary);
+    color: #fff;
+    margin: 1rem 0;
+    padding-bottom: 0.3rem;
+    font-weight: normal;
+}
+
+.concept__text--flipped {
+    grid-area: text;
+    color: #fff;
+    font-weight: normal;
+}
+
+
+
+/* Contact */
+.contact-container {
+    display: grid;
+    grid-template-columns: 8vw 1fr 1fr 8vw;
+    grid-template-rows: auto;
+    grid-template-areas:
+        ". hours hours ."
+        ". mail mail ."
+        ". some some ."
+        ". call call ."
+        ". location location .";
+}
+
+.contact__heading {
+    grid-area: heading;
+    color: #fff;
+    font-weight: normal;
+    padding-bottom: 0.3rem;
+    margin: 2rem 0 1rem 0;
+    border-bottom: 3px solid var(--brand-secondary);
+}
+
+.contact__text {
+    grid-area: text;
+    color: #fff;
+}
+
+.contact__open-hours {
+    margin-top: 2rem;
+    grid-area: hours;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "heading heading heading heading"
+        "text text text text";
+}
+
+.open-hours__text {
+    line-height: 2.2;
+}
+
+.contact__form {
+    grid-area: mail;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "heading heading heading heading"
+        "text text text text"
+        "form form form form";
+}
+
+/* FORM Start */
+
+.contact-form {
+    grid-area: form;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input {
+    color: #fff;
+    padding-left: 0.4rem;
+    width: 97%;
+    border-radius: 0.4rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    margin-bottom: 1rem;
+    border: 2px solid #fff;
+    background-color: transparent;
+}
+
+.contact-form input:active {
+    background-color: transparent;
+}
+
+.contact-form textarea {
+    color: #fff;
+    padding-left: 0.4rem;
+    width: 97%;
+    text-decoration: none;
+    border-radius: 0.4rem;
+    padding-top: 0.2rem;
+    padding-bottom: 5rem;
+    background-color: transparent;
+    border: 2px solid #fff;
+    resize: none;
+
+}
+
+
+.contact-form button {
+    align-self: center;
+    margin: 1rem 0;
+    background-color: #0a0a0a;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+    text-transform: capitalize;
+    color: #fff;
+    text-decoration: none;
+    width: 50%;
+    border: 2px solid white;
+    text-align: center;
+    border-radius: 0.3rem;
+    font-weight: 500;
+    font-size: 1.9ch;
+
+}
+
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #fff;
+    opacity: 1;
+    /* Firefox */
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #fff;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #fff;
+}
+
+.contact-form button:focus {
+    outline: none;
+}
+
+.contact-form input:focus {
+    outline: none;
+}
+
+.contact-form textarea:focus {
+    outline: none;
+}
+
+/* FORM End*/
+
+
+.contact__some {
+    grid-area: some;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "heading heading heading heading"
+        "text text text text"
+        "icon icon icon icon";
+}
+
+.contact__some__link {
+    justify-self: center;
+    grid-area: icon;
+    display: flex;
+    margin-top: 2rem;
+    align-items: center;
+    font-size: 1.2em;
+    color: #fff;
+}
+
+.contact__icon__fb {
+    width: 2.5rem;
+    margin-right: 1rem;
+}
+
+
+.contact__phone {
+    grid-area: call;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "heading heading heading heading"
+        "text text text text"
+        "icon icon icon icon";
+}
+
+.contact__icon__phone {
+    width: 2.5rem;
+    margin-right: 1rem;
+}
+
+.contact__location {
+    margin-bottom: 5rem;
+    grid-area: location;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "heading heading heading heading"
+        "text text text text"
+        "map map map map";
+}
+
+.contact__map {
+    grid-area: map;
+    margin-top: 2rem;
+    width: 100%;
+    height: 15rem;
+}
 
 
 
@@ -426,11 +661,13 @@ font-weight: normal;
     .nav-logo-img {
         width: 100%;
     }
+
     .facebook-icon {
         position: fixed;
         top: 1.05rem;
         left: 1.2rem;
     }
+
     .burger {
         display: none;
     }
@@ -455,61 +692,160 @@ font-weight: normal;
         font-size: 1.3em;
     }
 
-/* Landing */
+    /* Landing */
 
-.landing-sect-links {
-    grid-template-columns: 8vw 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 8vw;
-    grid-template-areas: 
-    ". concept concept concept concept concept concept concept concept ."
-    ". news news news news news news news news ."
-    ". barista barista barista barista decor decor decor decor ."
-    ". gallery gallery gallery gallery gallery gallery gallery gallery ."
-    ". contact contact contact contact contact contact contact contact ."
-    ". location location location location location location location location .";
-}
+    .landing-sect-links {
+        grid-template-columns: 8vw 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 8vw;
+        grid-template-areas:
+            ". concept concept concept concept concept concept concept concept ."
+            ". news news news news news news news news ."
+            ". barista barista barista barista decor decor decor decor ."
+            ". gallery gallery gallery gallery gallery gallery gallery gallery ."
+            ". contact contact contact contact contact contact contact contact ."
+            ". location location location location location location location location .";
+    }
 
 
 
-.landing-sect-links div h2 {
-    font-size: 1.9em;
-}
-.landing-sect-links p {
-    font-size: 1.4em;
-    margin-top: 17.5rem;
-}
+    .landing-sect-links div h2 {
+        font-size: 1.9em;
+    }
 
-.link-concept {
-    height: 20rem;
-}
+    .landing-sect-links p {
+        font-size: 1.4em;
+        margin-top: 17.5rem;
+    }
 
-.link-concept div {
-    background-size: 110%;
-}
+    .link-concept {
+        height: 20rem;
+    }
 
-.link-news {
-    height: 12rem;
-}
+    .link-concept div {
+        background-size: 110%;
+    }
 
-.link-baristas {
-    height: 12rem;
-}
+    .link-news {
+        height: 12rem;
+    }
 
-.link-decor {
-    height: 12rem;
-}
+    .link-baristas {
+        height: 12rem;
+    }
 
-.link-gallery {
-    height: 20rem;
-}
+    .link-decor {
+        height: 12rem;
+    }
 
-.link-contact {
-    height: 10rem;
-}
+    .link-gallery {
+        height: 20rem;
+    }
 
-.link-location {
-    height: 10rem;
-}
+    .link-contact {
+        height: 10rem;
+    }
 
+    .link-location {
+        height: 10rem;
+    }
+
+
+    /* Concept */
+    .concept-container {
+        display: grid;
+        grid-template-columns: 7vw 1fr 1fr 7vw;
+        grid-template-rows: auto;
+        grid-template-areas:
+            ". concept concept ."
+            ". coffee coffee ."
+            ". barista interior .";
+    }
+
+    .concept--top {
+        margin-top: 2rem;
+        grid-area: concept;
+    }
+
+    .concept--mid {
+        grid-area: coffee;
+    }
+
+    .concept--flipped--mid {
+        grid-area: barista;
+    }
+
+    .concept--flipped--bottom {
+        grid-area: interior;
+    }
+
+    .concept {
+        width: 100%;
+        margin-bottom: 4rem;
+        gap: 1rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "heading heading heading heading image image image image"
+            "text text text text image image image image"
+            ". . . . image image image image";
+    }
+
+    .concept__prices {}
+
+    .concept__image {
+        grid-area: image;
+        width: 100%;
+    }
+
+    .concept__headline {
+        grid-area: heading;
+        border-bottom: 3px solid var(--brand-secondary);
+        color: #fff;
+        margin: 0;
+        padding-bottom: 0.2rem;
+        font-weight: normal;
+    }
+
+    .concept__text {
+        grid-area: text;
+        color: #fff;
+        font-weight: normal;
+    }
+
+    .concept--flipped {
+        width: 100%;
+        margin-bottom: 4rem;
+        gap: 1rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "image image image image"
+            "heading heading heading heading"
+            "text text text text";
+    }
+
+
+    .concept__image--flipped {
+        grid-area: image;
+        width: 94%;
+    }
+
+    .concept__headline--flipped {
+        grid-area: heading;
+        border-bottom: 3px solid var(--brand-secondary);
+        color: #fff;
+        margin: 1rem 0;
+        padding-bottom: 0.3rem;
+        font-weight: normal;
+    }
+
+    .concept__text--flipped {
+        grid-area: text;
+        color: #fff;
+        font-weight: normal;
+        padding-right: 1rem;
+    }
 
 }
 
@@ -523,7 +859,7 @@ font-weight: normal;
         top: -10.5rem;
         display: block;
     }
-    
+
     .nav-logo-link {
         left: 15.5vw;
         top: 12rem;
@@ -536,10 +872,11 @@ font-weight: normal;
         right: 12vw;
         top: 16rem;
     }
-    
+
     .nav-logo-img {
         width: 100%;
     }
+
     .nav-responsive-list {
         position: absolute;
         display: flex;
@@ -567,63 +904,88 @@ font-weight: normal;
         color: var(--brand-secondary);
     }
 
-/* Landing */
+    /* Landing */
 
 
     .landing-sect-links {
         gap: 1.5rem;
         grid-template-columns: 14vw 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 14vw;
-        grid-template-areas: 
-        ". concept concept concept concept concept concept concept concept concept concept concept concept ."
-        ". news news news news barista barista barista barista decor decor decor decor ."
-        ". gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery ."
-        ". contact contact contact contact contact contact location location location location location location .";
+        grid-template-areas:
+            ". concept concept concept concept concept concept concept concept concept concept concept concept ."
+            ". news news news news barista barista barista barista decor decor decor decor ."
+            ". gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery ."
+            ". contact contact contact contact contact contact location location location location location location .";
     }
-    
+
 
     .landing_links--resize:hover {
         transform: scale(1.01);
         transition-duration: 0.2s;
     }
-    
+
     .landing-sect-links div h2 {
         font-size: 3em;
     }
+
     .landing-sect-links p {
         font-size: 2em;
         margin-top: 26rem;
     }
-    
+
     .link-concept {
         height: 30rem;
     }
-    
+
     .link-concept div {
         background-size: cover;
         background-position: center;
     }
-    
+
     .link-news {
         height: 23rem;
     }
-    
+
     .link-baristas {
         height: 23rem;
     }
-    
+
     .link-decor {
         height: 23rem;
     }
-    
+
     .link-gallery {
         height: 30rem;
     }
-    
+
     .link-contact {
         height: 16rem;
     }
-    
+
     .link-location {
         height: 16rem;
+    }
+
+    .concept__headline {
+        font-size: 2.2em;
+    }
+
+    .concept__text {
+        font-size: 1.15em;
+    }
+
+
+    .concept-container {
+        grid-template-columns: 14vw 1fr 1fr 14vw;
+        padding: 0 1.2rem;
+
+    }
+
+    .concept__headline--flipped {
+        font-size: 2.2em;
+
+    }
+
+    .concept__text--flipped {
+        font-size: 1.15em;
     }
 }
