@@ -177,12 +177,6 @@ header {
         ". location location location location .";
 }
 
-/* .landing-sect-links div {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-} */
-
 .landing-sect-links div h2 {
     color: var(--brand-third);
     font-weight: normal;
@@ -855,8 +849,6 @@ header {
         grid-template-areas:
             ". concept concept ."
             ". coffee coffee ."
-
-
             ". barista interior .";
     }
 
@@ -935,12 +927,12 @@ header {
     }
 
 
-    .concept__image--flipped {
+    .concept__image-flipped {
         grid-area: image;
         width: 94%;
     }
 
-    .concept__headline--flipped {
+    .concept__headline-flipped {
         grid-area: heading;
         border-bottom: 3px solid var(--brand-secondary);
         color: var(--brand-third);
@@ -949,7 +941,7 @@ header {
         font-weight: normal;
     }
 
-    .concept__text--flipped {
+    .concept__text-flipped {
         grid-area: text;
         color: var(--brand-third);
         font-weight: normal;
@@ -1220,6 +1212,7 @@ header {
             "button-CC button-JC . . image image image image"
             ". . . . image image image image";
     }
+
 
     .concept__button__link {
         width: 75%;
