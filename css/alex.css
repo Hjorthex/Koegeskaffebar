@@ -13,6 +13,9 @@
 :root {
     --brand-primary: #161616;
     --brand-secondary: #6EAA59;
+    --brand-third: #fff;
+    --brand-fourth: #000;
+
 }
 
 .latest-news {
@@ -83,6 +86,45 @@
     grid-area: image;
     width: 100%;
 }
+
+
+/* FOOTER */
+footer {
+    width: 100%;
+    background-color: var(--brand-fourth);
+    display: grid;
+    grid-template-columns: 8vw 1fr 1fr 1fr 1fr 8vw;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    ". hours hours hours hours .";
+}
+
+.foot__container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "heading heading heading heading"
+    "text text text text" ;
+}
+
+.foot__heading {
+    grid-area: heading;
+    color: var(--brand-third);
+    border-bottom: 3px solid var(--brand-secondary);
+}
+
+.foot__text {
+    grid-area: text;
+    color: var(--brand-third);
+}
+
+
+.foot__grid-area-hours {
+    grid-area: hours;
+}
+
 
 @media only screen and (min-width: 700px)
 {
