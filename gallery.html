@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="coffee bar, landing page, info website">
-    <meta name="description" content="this page functions as a landing page for the danish coffee bar located in Koege, named Koeges kaffebar">
+    <meta name="description"
+        content="this page functions as a landing page for the danish coffee bar located in Koege, named Koeges kaffebar">
     <title>Køges Kaffebar</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/lightbox.min.css">
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
 </head>
+
 <body>
     <header>
-        <a class="nav-logo-link" href="index.html"><img class="nav-logo-img" src="./images/logo.svg" alt="koegeskaffebar-logo"></a>
-        <a target="blank" href="https://www.facebook.com/koegeskaffebar"><img class="facebook-icon" src="./images/facebook-icon.svg" alt="facebook"></a>
+        <a class="nav-logo-link" href="index.html"><img class="nav-logo-img" src="./images/logo.svg"
+                alt="koegeskaffebar-logo"></a>
+        <a target="blank" href="https://www.facebook.com/koegeskaffebar"><img class="facebook-icon"
+                src="./images/facebook-icon.svg" alt="facebook"></a>
         <div onclick="openNav()" class="burger">
             <div class="nav-burger-line"></div>
             <div class="nav-burger-line"></div>
-            <div class="nav-burger-line"></div>        
+            <div class="nav-burger-line"></div>
         </div>
         <nav class="nav-responsive-list">
             <ul class="nav-list-horizontal">
@@ -27,19 +33,142 @@
                 <li><a href="contact.html">Kontakt</a></li>
             </ul>
         </nav>
-
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="logo-nav-container">
+                <img class="logo-nav-burger" src="./images/logo.svg" alt="">
+            </div>
             <a href="index.html">Hjem</a>
             <a href="concept.html">Koncept</a>
-            <a href="gallery.html">Galleri</a>     
+            <a href="gallery.html">Galleri</a>
             <a href="news.html">Nyheder</a>
             <a href="contact.html">Kontakt</a>
-          </div>
+        </div>
     </header>
 
-    <section></section>
 
-<script src="script.js"></script>
+    <div class="container">
+        <div class="gallery-container w-3 h-3">
+          <div class="gallery-item">
+            <div class="image">
+                <a href="./gallery/open.png" data-lightbox="mygallery">
+                    <img src="./gallery/open.png" alt="travel">
+                </a>            
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-container w-2 h-4">
+          <div class="gallery-item">
+            <div class="image">
+                <a href="./gallery/inspiring-quotes.png" data-lightbox="mygallery">
+                    <img src="./gallery/inspiring-quotes.png" alt="travel">
+                </a>            
+            </div>
+          </div>
+        </div>
+    
+        <div class="gallery-container h-3 w-4">
+          <div class="gallery-item">
+            <div class="image">
+                <a href="./gallery/syrup.png" data-lightbox="mygallery">
+                    <img src="./gallery/syrup.png" alt="travel">
+                </a>            
+            </div>
+          </div>
+        </div>
+    
+        <div class="gallery-container w-2 h-3">
+          <div class="gallery-item">
+            <div class="image">
+                <a href="./gallery/coffeemachine-gallerypng.png" data-lightbox="mygallery">
+                    <img src="./gallery/coffeemachine-gallerypng.png" alt="travel">
+                </a>            
+            </div>
+          </div>
+        </div>
+    
+        <div class="gallery-container w-2 h-1">
+          <div class="gallery-item">
+            <div class="image">
+                <a href="./gallery/Nyheder.png" data-lightbox="mygallery">
+                    <img src="./gallery/Nyheder.png" alt="travel">
+                </a>
+            </div>
+          </div>
+        </div>
+    
+        <div class="gallery-container w-2 h-3">
+          <div class="gallery-item">
+            <div class="image">
+                <a href="./gallery/baristaerne.png" data-lightbox="mygallery">
+                    <img src="./gallery/baristaerne.png" alt="travel">
+                </a>
+            </div>
+          </div>
+        </div>
+    
+        <div class="gallery-container h-2">
+          <div class="gallery-item">
+            <div class="image">
+                <a href="./gallery/onfacebook.png" data-lightbox="mygallery">
+                    <img src="./gallery/onfacebook.png" alt="art">
+                </a>
+            </div>
+          </div>
+        </div>
+    
+        <div class="gallery-container">
+          <div class="gallery-item">
+            <div class="image">
+                <a href="./gallery/prices.png" data-lightbox="mygallery">
+                    <img src="./gallery/prices.png" alt="cars">
+                </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-container w-1 h-2">
+            <div class="gallery-item">
+              <div class="image">
+                <a href="./gallery/croissant.png" data-lightbox="mygallery">
+                    <img src="./gallery/croissant.png" alt="fitness">
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-container w-1 h-2">
+            <div class="gallery-item">
+              <div class="image">
+                  <a href="./gallery/coffee-can.png" data-lightbox="mygallery">
+                    <img src="./gallery/coffee-can.png" alt="fitness">
+                  </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-container w-1 h-2">
+            <div class="gallery-item">
+              <div class="image">
+                  <a href="./gallery/plant.png" data-lightbox="mygallery">
+                <img src="./gallery/plant.png" alt="fitness">     
+                  </a>
+              </div>
+            </div>
+          </div>
+    
+      </div>
+
+
+
+
+
+
+    </div>
+
+    <script src="./js/lightbox-plus-jquery.min.js"></script>
+    <script src="./js/script.js"></script>
 </body>
+
 </html>

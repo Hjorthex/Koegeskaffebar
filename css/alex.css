@@ -22,7 +22,7 @@
 .latest-news__contains {
     width: 100%;
     height: 23rem;
-    background-image: url(./images/exterior.png);
+    background-image: url(../images/exterior.png);
     background-size: cover;
     background-position: bottom;
 }

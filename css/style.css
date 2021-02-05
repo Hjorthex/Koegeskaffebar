@@ -1,6 +1,6 @@
 @font-face {
     font-family: century-gothic;
-    src: url(./fonts/911Fonts.com_CenturyGothicRegular__-_911fonts.com_fonts_mhpY.ttf);
+    src: url(../fonts/911Fonts.com_CenturyGothicRegular__-_911fonts.com_fonts_mhpY.ttf);
 }
 
 * {
@@ -39,6 +39,9 @@ a {
     --brand-primary: #161616;
     --brand-secondary: #6EAA59;
 }
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     background-color: var(--brand-primary);
@@ -47,7 +50,7 @@ body {
 /*Nav */
 
 header {
-    background-image: url(./images/coffeeheader-dark.jpg);
+    background-image: url(../images/coffeeheader-dark.jpg);
     background-size: 170%;
     background-position: center;
     height: 23rem;
@@ -250,7 +253,7 @@ header {
     justify-content: center;
     width: 100%;
     height: 100%;
-    background-image: url(./images/koncept.png);
+    background-image: url(../images/koncept.png);
     background-size: 140%;
     background-position: right bottom;
 }
@@ -260,7 +263,7 @@ header {
     justify-content: center;
     width: 100%;
     height: 100%;
-    background-image: url(./images/coffeebar.jpg);
+    background-image: url(../images/coffeebar.jpg);
     background-size: cover;
 }
 
@@ -269,7 +272,7 @@ header {
     justify-content: center;
     width: 100%;
     height: 100%;
-    background-image: url(./images/baristaerne.png);
+    background-image: url(../gallery/baristaerne.png);
     background-size: cover;
 }
 
@@ -278,7 +281,7 @@ header {
     justify-content: center;
     width: 100%;
     height: 100%;
-    background-image: url(./images/Nyheder.png);
+    background-image: url(../images/Nyheder.png);
     background-size: 200%;
     background-position: left bottom;
 }
@@ -317,22 +320,31 @@ header {
 
 .couch {
     grid-area: couch;
-    background-color: rgb(138, 138, 103);
+    background-image: url(../gallery/open.png);
+    background-size: cover;
+    background-position: center;
 }
 
 .shop {
     grid-area: shop;
-    background-color: rgb(138, 138, 103);
+    background-image: url(../gallery/syrup.png);
+    background-size: cover;
+    background-position: 0% 65%;
+
 }
 
 .coffee {
     grid-area: coffee;
-    background-color: rgb(138, 138, 103);
+    background-image: url(../gallery/two-coffee-cups.png);
+    background-size: cover;
+    background-position: 50% 50%;
 }
 
 .barista {
     grid-area: barista;
-    background-color: rgb(138, 138, 103);
+    background-image: url(../gallery/inspiring-quotes.png);
+    background-size: cover;
+    background-position: bottom;
 }
 
 
@@ -342,7 +354,7 @@ header {
     justify-content: center;
     width: 100%;
     height: 100%;
-    background-image: url(./images/kontakt.png);
+    background-image: url(../images/kontakt.png);
     background-size: cover;
     background-position: center;
 }
@@ -352,7 +364,7 @@ header {
     justify-content: center;
     width: 100%;
     height: 100%;
-    background-image: url(./images/location.png);
+    background-image: url(../images/location.png);
     background-size: cover;
     background-position: center;
 }
@@ -675,6 +687,71 @@ header {
     height: 15rem;
 }
 
+/* GALLERY */
+
+.container{
+    margin: 2rem 8vw;
+    display:grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-auto-rows: 12rem;
+    grid-gap: 1rem;
+    grid-auto-flow: dense;
+}
+
+.gallery-item{
+    width:100%;
+    height:100%;
+    position:relative;
+}
+
+.gallery-item .image{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+
+.gallery-item .image img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    object-position:50% 50%;
+    cursor:pointer;
+    transition:.5s ease-in-out;
+}
+.gallery-container:hover{
+    transform:scale(1.01);
+}
+
+
+.gallery-item:hover .text{
+    opacity:1;
+    animation: move-down .3s linear;
+    padding:1em;
+    width:100%;
+}
+
+.w-1,.w-2,.w-3,.w-4,.w-5,.w-6{
+    grid-column:span 1;
+}
+
+@keyframes move-down{
+
+    0%{
+        top:10%;
+    }
+    50%{
+        top:35%;
+    }
+    100%{
+        top:50%;
+    }
+}
+
+
+
+
+
+
 
 
 @media only screen and (min-width: 700px) {
@@ -969,6 +1046,54 @@ header {
             "icon icon icon icon";
     }
 
+
+/* GALLERY */
+
+.container{
+    margin: 2rem 8vw;
+    grid-template-columns: repeat(3,1fr);
+}
+
+
+.w-1{
+    grid-column: span 1;
+}
+.w-2{
+    grid-column: span 2;
+}
+.w-3{
+    grid-column: span 2;
+}
+.w-4{
+    grid-column: span 3;
+}
+.w-5{
+    grid-column: span 3;
+}
+.w-6{
+    grid-column: span 3;
+}
+
+.h-1{
+    grid-row: span 1;
+}
+.h-2{
+    grid-row: span 2;
+}
+.h-3{
+    grid-row: span 2;
+}
+.h-4{
+    grid-row: span 3;
+}
+.h-5{
+    grid-row: span 3;
+}
+.h-6{
+    grid-row: span 3;
+} 
+
+
 }
 
 
@@ -1075,6 +1200,11 @@ header {
         height: 23rem;
     }
 
+    .landing_gallery_title { 
+        font-size: 3em;
+    }
+
+
     .link-gallery {
         height: 30rem;
     }
@@ -1175,4 +1305,51 @@ header {
     cursor: pointer;
     transform: scale(1.01);
 }
+
+    /* Gallery */
+    .container{
+        margin: 2rem 14vw;
+        grid-template-columns: repeat(5,1fr);
+    } 
+
+    
+.w-1{
+    grid-column: span 1;
+}
+.w-2{
+    grid-column: span 2;
+}
+.w-3{
+    grid-column: span 3;
+}
+.w-4{
+    grid-column: span 4;
+}
+.w-5{
+    grid-column: span 5;
+}
+.w-6{
+    grid-column: span 6;
+}
+
+.h-1{
+    grid-row: span 1;
+}
+.h-2{
+    grid-row: span 2;
+}
+.h-3{
+    grid-row: span 3;
+}
+.h-4{
+    grid-row: span 4;
+}
+.h-5{
+    grid-row: span 5;
+}
+.h-6{
+    grid-row: span 6;
+} 
+
+
 }
