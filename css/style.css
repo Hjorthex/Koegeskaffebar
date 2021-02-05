@@ -106,9 +106,6 @@ header {
 
 /* Menu */
 
-
-
-
 .sidenav {
     height: 100%;
     width: 0;
@@ -125,7 +122,7 @@ header {
     flex-direction: column;
 }
 
-.sidenav a {
+.sidenav__link {
     text-transform: uppercase;
     letter-spacing: 0.35ch;
     text-align: center;
@@ -140,8 +137,8 @@ header {
 .sidenav .closebtn {
     color: var(--brand-third);
     position: absolute;
-    top: -1.5rem;
-    right: -0.5rem;
+    top: -0.5rem;
+    right: 1.2rem;
     font-size: 8ch;
 
 }
@@ -159,13 +156,6 @@ header {
     align-self: center;
     margin: 2rem auto 0.8rem auto;
 }
-
-
-
-
-
-
-
 
 /* Landing page */
 
@@ -233,8 +223,6 @@ header {
     height: 15rem;
 }
 
-
-
 .link-contact {
     grid-area: contact;
     height: 7.5rem;
@@ -283,8 +271,6 @@ header {
     background-position: left bottom;
 }
 
-
-
 .landing_gallery_title {
     color: var(--brand-third);
     position: absolute;
@@ -315,14 +301,14 @@ header {
         "coffee coffee barista";
 }
 
-.couch {
+.container_landing_gallery__gal1 {
     grid-area: couch;
     background-image: url(../gallery/open.png);
     background-size: cover;
     background-position: center;
 }
 
-.shop {
+.container_landing_gallery__gal2 {
     grid-area: shop;
     background-image: url(../gallery/syrup.png);
     background-size: cover;
@@ -330,21 +316,19 @@ header {
 
 }
 
-.coffee {
+.container_landing_gallery__gal3 {
     grid-area: coffee;
     background-image: url(../gallery/two-coffee-cups.png);
     background-size: cover;
     background-position: 50% 50%;
 }
 
-.barista {
+.container_landing_gallery__gal4 {
     grid-area: barista;
     background-image: url(../gallery/inspiring-quotes.png);
     background-size: cover;
     background-position: bottom;
 }
-
-
 
 .link-contact div {
     display: flex;
@@ -378,20 +362,20 @@ header {
         ". interior interior .";
 }
 
-.concept--top {
+.concept-top {
     margin-top: 2rem;
     grid-area: concept;
 }
 
-.concept--mid {
+.concept-mid {
     grid-area: coffee;
 }
 
-.concept--flipped--mid {
+.concept-flipped-mid {
     grid-area: barista;
 }
 
-.concept--flipped--bottom {
+.concept-flipped-bottom {
     grid-area: interior;
 }
 
@@ -406,11 +390,23 @@ header {
         "image image image image"
         "heading heading heading heading"
         "text text text text"
-        ". button button .";
+        "button-JC button-JC button-CC button-CC"
+        ;
 }
 
-.concept__button__link {
-    grid-area: button;
+.concept__button__cc {
+    grid-area: button-CC;
+    width: auto;
+    border: 3px solid var(--brand-secondary);
+    text-align: center;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    background-color: #000;
+    color: var(--brand-third);
+}
+
+.concept__button__jc {
+    grid-area: button-JC;
     width: auto;
     border: 3px solid var(--brand-secondary);
     text-align: center;
@@ -438,6 +434,7 @@ header {
     grid-area: text;
     color: var(--brand-third);
     font-weight: normal;
+    margin-bottom: 2rem;
 }
 
 .concept--flipped {
@@ -454,12 +451,12 @@ header {
 }
 
 
-.concept__image--flipped {
+.concept__image-flipped {
     grid-area: image;
     width: 100%;
 }
 
-.concept__headline--flipped {
+.concept__headline-flipped {
     grid-area: heading;
     border-bottom: 3px solid var(--brand-secondary);
     color: var(--brand-third);
@@ -468,10 +465,11 @@ header {
     font-weight: normal;
 }
 
-.concept__text--flipped {
+.concept__text-flipped {
     grid-area: text;
     color: var(--brand-third);
     font-weight: normal;
+    margin-bottom: 2rem;
 }
 
 
@@ -644,7 +642,7 @@ header {
     width: 2.5rem;
     margin-right: 1rem;
 }
-.some__text--shorten {
+.some__text-shorten {
     width: 15rem;
 }
 
@@ -743,13 +741,6 @@ header {
         top:50%;
     }
 }
-
-
-
-
-
-
-
 
 @media only screen and (min-width: 700px) {
     header {
@@ -896,7 +887,7 @@ header {
         grid-template-areas:
             "heading heading heading heading image image image image"
             "text text text text image image image image"
-            "button button . . image image image image"
+            "button-CC button-CC button-JC button-JC image image image image"
             ". . . . image image image image";
     }
 
@@ -1214,6 +1205,8 @@ header {
         height: 16rem;
     }
 
+    /* Concept */
+
     .concept {
         width: 100%;
         margin-bottom: 4rem;
@@ -1224,7 +1217,7 @@ header {
         grid-template-areas:
             "heading heading heading heading image image image image"
             "text text text text image image image image"
-            "button . . . image image image image"
+            "button-CC button-JC . . image image image image"
             ". . . . image image image image";
     }
 
