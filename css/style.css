@@ -38,6 +38,7 @@ a {
 :root {
     --brand-primary: #161616;
     --brand-secondary: #6EAA59;
+    --brand-third: #fff;
 }
 html {
     scroll-behavior: smooth;
@@ -87,7 +88,7 @@ header {
     margin: 0.52rem auto;
     height: 0.35rem;
     width: 100%;
-    background-color: #fff;
+    background-color: var(--brand-third);
     border-radius: 10px;
 }
 
@@ -131,17 +132,13 @@ header {
     padding: 1rem 1rem 1rem 1rem;
     text-decoration: none;
     font-size: 25px;
-    color: #ffffff;
+    color: var(--brand-third);
     display: block;
     transition: 0.3s;
 }
 
-.sidenav a:hover {
-    color: #f1f1f1;
-}
-
 .sidenav .closebtn {
-    color: #fff;
+    color: var(--brand-third);
     position: absolute;
     top: -1.5rem;
     right: -0.5rem;
@@ -197,7 +194,7 @@ header {
 } */
 
 .landing-sect-links div h2 {
-    color: #fff;
+    color: var(--brand-third);
     font-weight: normal;
     align-self: center;
     text-align: center;
@@ -205,7 +202,7 @@ header {
 }
 
 .landing-sect-links p {
-    color: #fff;
+    color: var(--brand-third);
     text-align: center;
     font-size: 1em;
     position: absolute;
@@ -289,7 +286,7 @@ header {
 
 
 .landing_gallery_title {
-    color: #fff;
+    color: var(--brand-third);
     position: absolute;
     justify-self: center;
     align-self: center;
@@ -420,7 +417,7 @@ header {
     padding-top: 0.6rem;
     padding-bottom: 0.6rem;
     background-color: #000;
-    color: #fff;
+    color: var(--brand-third);
 }
 
 .concept__image {
@@ -431,7 +428,7 @@ header {
 .concept__headline {
     grid-area: heading;
     border-bottom: 3px solid var(--brand-secondary);
-    color: #fff;
+    color: var(--brand-third);
     margin: 1rem 0;
     padding-bottom: 0.3rem;
     font-weight: normal;
@@ -439,7 +436,7 @@ header {
 
 .concept__text {
     grid-area: text;
-    color: #fff;
+    color: var(--brand-third);
     font-weight: normal;
 }
 
@@ -465,7 +462,7 @@ header {
 .concept__headline--flipped {
     grid-area: heading;
     border-bottom: 3px solid var(--brand-secondary);
-    color: #fff;
+    color: var(--brand-third);
     margin: 1rem 0;
     padding-bottom: 0.3rem;
     font-weight: normal;
@@ -473,7 +470,7 @@ header {
 
 .concept__text--flipped {
     grid-area: text;
-    color: #fff;
+    color: var(--brand-third);
     font-weight: normal;
 }
 
@@ -494,7 +491,7 @@ header {
 
 .contact__heading {
     grid-area: heading;
-    color: #fff;
+    color: var(--brand-third);
     font-weight: normal;
     padding-bottom: 0.3rem;
     margin: 2rem 0 1rem 0;
@@ -503,7 +500,7 @@ header {
 
 .contact__text {
     grid-area: text;
-    color: #fff;
+    color: var(--brand-third);
 }
 
 .contact__open-hours {
@@ -542,14 +539,14 @@ header {
 }
 
 .contact-form input {
-    color: #fff;
+    color: var(--brand-third);
     padding-left: 0.4rem;
     width: 97%;
     border-radius: 0.4rem;
     padding-top: 0.3rem;
     padding-bottom: 0.3rem;
     margin-bottom: 1rem;
-    border: 2px solid #fff;
+    border: 2px solid var(--brand-third);
     background-color: #0a0a0a;
 }
 
@@ -558,7 +555,7 @@ header {
 }
 
 .contact-form textarea {
-    color: #fff;
+    color: var(--brand-third);
     padding-left: 0.4rem;
     width: 97%;
     text-decoration: none;
@@ -566,7 +563,7 @@ header {
     padding-top: 0.2rem;
     padding-bottom: 5rem;
     background-color: #0a0a0a;
-    border: 2px solid #fff;
+    border: 2px solid var(--brand-third);
     resize: none;
 
 }
@@ -582,7 +579,7 @@ header {
     color: #fff;
     text-decoration: none;
     width: 50%;
-    border: 2px solid white;
+    border: 2px solid var(--brand-third);
     text-align: center;
     border-radius: 0.3rem;
     font-weight: 500;
@@ -592,19 +589,19 @@ header {
 
 ::placeholder {
     /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: #fff;
+    color: var(--brand-third);
     opacity: 1;
     /* Firefox */
 }
 
 :-ms-input-placeholder {
     /* Internet Explorer 10-11 */
-    color: #fff;
+    color: var(--brand-third);
 }
 
 ::-ms-input-placeholder {
     /* Microsoft Edge */
-    color: #fff;
+    color: var(--brand-third);
 }
 
 .contact-form button:focus {
@@ -640,7 +637,7 @@ header {
     margin-top: 2rem;
     align-items: center;
     font-size: 1.2em;
-    color: #fff;
+    color: var(--brand-third);
 }
 
 .contact__icon__fb {
@@ -798,7 +795,7 @@ header {
 
     .nav-list-horizontal a {
         text-decoration: none;
-        color: #fff;
+        color: var(--brand-third);
         font-size: 1.3em;
     }
 
@@ -921,7 +918,7 @@ header {
     .concept__headline {
         grid-area: heading;
         border-bottom: 3px solid var(--brand-secondary);
-        color: #fff;
+        color: var(--brand-third);
         margin: 0;
         padding-bottom: 0.2rem;
         font-weight: normal;
@@ -929,7 +926,7 @@ header {
 
     .concept__text {
         grid-area: text;
-        color: #fff;
+        color: var(--brand-third);
         font-weight: normal;
     }
 
@@ -955,7 +952,7 @@ header {
     .concept__headline--flipped {
         grid-area: heading;
         border-bottom: 3px solid var(--brand-secondary);
-        color: #fff;
+        color: var(--brand-third);
         margin: 1rem 0;
         padding-bottom: 0.3rem;
         font-weight: normal;
@@ -963,7 +960,7 @@ header {
 
     .concept__text--flipped {
         grid-area: text;
-        color: #fff;
+        color: var(--brand-third);
         font-weight: normal;
         padding-right: 1rem;
     }
@@ -1026,7 +1023,7 @@ header {
         margin-top: 2rem;
         align-items: left;
         font-size: 1.2em;
-        color: #fff;
+        color: var(--brand-third);
     }
     
     .contact__icon__fb {
@@ -1242,7 +1239,7 @@ header {
     .concept__button__link:hover {
         border: 3px solid var(--brand-secondary);
         background-color: var(--brand-secondary);
-        color: #fff;
+        color: var(--brand-third);
         transform: scale(1.01);
     }
 
