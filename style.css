@@ -396,10 +396,20 @@ header {
     grid-template-areas:
         "image image image image"
         "heading heading heading heading"
-        "text text text text";
+        "text text text text"
+        ". button button .";
 }
 
-.concept__prices {}
+.concept__button__link {
+    grid-area: button;
+    width: auto;
+    border: 3px solid var(--brand-secondary);
+    text-align: center;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    background-color: #000;
+    color: #fff;
+}
 
 .concept__image {
     grid-area: image;
@@ -566,13 +576,6 @@ header {
     font-weight: 500;
     font-size: 1.9ch;
 
-}
-
-.contact-form button:hover {
-    background-color: #000;
-    border: 2px solid var(--brand-secondary);
-    cursor: pointer;
-    transform: scale(1.01);
 }
 
 ::placeholder {
@@ -787,6 +790,8 @@ header {
         grid-template-areas:
             ". concept concept ."
             ". coffee coffee ."
+
+
             ". barista interior .";
     }
 
@@ -817,10 +822,19 @@ header {
         grid-template-areas:
             "heading heading heading heading image image image image"
             "text text text text image image image image"
+            "button button . . image image image image"
             ". . . . image image image image";
     }
 
     .concept__prices {}
+
+    .concept__button__link {
+        width: 90%;
+        text-align: center;
+        padding-top: 0.6rem;
+        padding-bottom: 0.6rem;
+    }
+
 
     .concept__image {
         grid-area: image;
@@ -1073,6 +1087,35 @@ header {
         height: 16rem;
     }
 
+    .concept {
+        width: 100%;
+        margin-bottom: 4rem;
+        gap: 1rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "heading heading heading heading image image image image"
+            "text text text text image image image image"
+            "button . . . image image image image"
+            ". . . . image image image image";
+    }
+
+    .concept__button__link {
+        width: 75%;
+        text-align: center;
+        padding-top: 0.8rem;
+        padding-bottom: 0.8rem;
+        font-size: 1.4em;
+    }
+    
+    .concept__button__link:hover {
+        border: 3px solid var(--brand-secondary);
+        background-color: var(--brand-secondary);
+        color: #fff;
+        transform: scale(1.01);
+    }
+
     .concept__headline {
         font-size: 2.2em;
     }
@@ -1125,4 +1168,11 @@ header {
             "text text text text text ."
             "form form form form . .";
     }
+    
+    .contact-form button:hover {
+    background-color: #000;
+    border: 2px solid var(--brand-secondary);
+    cursor: pointer;
+    transform: scale(1.01);
+}
 }
