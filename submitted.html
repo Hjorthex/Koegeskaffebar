@@ -1,7 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNCETTZP88"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KNCETTZP88');
+</script>
     <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="5; url = index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="coffee bar, landing page, info website">
     <meta name="description" content="this page functions as a landing page for the danish coffee bar located in Koege, named Koeges kaffebar">
@@ -30,16 +40,48 @@
 
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="index.html">Hjem</a>
-            <a href="concept.html">Koncept</a>
-            <a href="gallery.html">Galleri</a>     
-            <a href="news.html">Nyheder</a>
-            <a href="contact.html">Kontakt</a>
-          </div>
+            <div class="logo-nav-container">
+            <img class="logo-nav-burger" src="./images/logo.svg" alt="logo">
+            </div>
+            <a class="sidenav__link" href="index.html">Hjem</a>
+            <a class="sidenav__link" href="concept.html">Koncept</a>
+            <a class="sidenav__link" href="gallery.html">Galleri</a>     
+            <a class="sidenav__link" href="news.html">Nyheder</a>
+            <a class="sidenav__link" href="contact.html">Kontakt</a>
+        </div>
     </header>
 
-    <section></section>
+    <section class="submitted">
+        <h2 class="submitted-heading">Tak fordi du kontaktede Køges Kaffebar</h2>
+        <p class="submitted-text">Du vil nu blive sendt tilbage til forsiden</p>
+    </section>
 
+    <footer>
+        <div class="foot__container  foot__grid-area-hours">
+            <h3 class="foot__heading">Åbningstider</h3>
+            <p class="foot__text">                
+                Mandag: Midlertidigt lukket <br>
+                Tirsdag: Midlertidigt lukket <br>
+                Onsdag: 09.00-17.00 <br>
+                Torsdag: 09.00-17.00 <br>
+                Fredag: 09.00-17.00 <br>
+                Lørdag: 09.00-15.00 <br>
+                Søndag: Lukket
+            </p>
+        </div>
+    
+        <div class="foot__container  foot__grid-area-contact">
+            <h3 class="foot__heading">Kontakt</h3>
+            <a class="foot__container__icon link__foot-phone" href="tel:+4529904405"><img class="foot-icon" src="./images/phone.png" alt="phone icon">+45 29 90 44 05</a>
+            <a class="foot__container__icon link__foot-mail" href="mailto:kontakt@koegeskaffebar.dk"><img class="foot-icon" src="./images/mail-icon.png" alt="mail icon">kontakt@koegeskaffebar.dk</a>
+        </div>
+    
+        <div class="foot__container  foot__grid-area-some">
+            <h3 class="foot__heading">Sociale medier</h3>
+            <a class="foot__container__icon link__foot-phone" href="tel:+4529904405"><img class="foot-icon" src="./images/facebook-icon.svg" alt="facebook icon">Facebook</a>
+        </div>
+    
+    </footer>
 <script src="./js/script.js"></script>
 </body>
 </html>
