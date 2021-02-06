@@ -39,7 +39,9 @@ a {
     --brand-primary: #161616;
     --brand-secondary: #6EAA59;
     --brand-third: #fff;
+    --brand-fourth: #000;
 }
+
 html {
     scroll-behavior: smooth;
 }
@@ -51,7 +53,7 @@ body {
 /*Nav */
 
 header {
-    background-image: url(../images/coffeeheader-dark.jpg);
+    background-image: url(../images/coffeeheader.jpg);
     background-size: 170%;
     background-position: center;
     height: 23rem;
@@ -162,19 +164,19 @@ header {
 .landing-sect-links {
     padding-top: 1rem;
     padding-bottom: 2rem;
-    width: 100%;
+    margin: 0 8vw;
     display: grid;
     gap: 1rem;
-    grid-template-columns: 8vw 1fr 1fr 1fr 1fr 8vw;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas:
-        ". concept concept concept concept ."
-        ". news news news news ."
-        ". barista barista barista barista ."
-        ". decor decor decor decor ."
-        ". gallery gallery gallery gallery ."
-        ". contact contact contact contact ."
-        ". location location location location .";
+        "concept concept concept concept"
+        "news news news news"
+        "barista barista barista barista"
+        "decor decor decor decor"
+        "gallery gallery gallery gallery"
+        "contact contact contact contact"
+        "location location location location";
 }
 
 .landing-sect-links div h2 {
@@ -347,21 +349,31 @@ header {
 /* Concept */
 .concept-container {
     display: grid;
-    grid-template-columns: 8vw 1fr 1fr 8vw;
+    margin: 0 8vw;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas:
-        ". concept concept ."
-        ". coffee coffee ."
-        ". barista barista ."
-        ". interior interior .";
+        "jc jc"
+        "cc cc"
+        "coffee coffee"
+        "barista barista"
+        "interior interior";
+}
+.concept__divider {
+    display: none;
 }
 
-.concept-top {
+.concept-jc {
     margin-top: 2rem;
-    grid-area: concept;
+    grid-area: jc;
 }
 
-.concept-mid {
+.concept-cc {
+    margin-top: 2rem;
+    grid-area: cc;
+}
+
+.concept-coffee {
     grid-area: coffee;
 }
 
@@ -384,29 +396,18 @@ header {
         "image image image image"
         "heading heading heading heading"
         "text text text text"
-        "button-JC button-JC button-CC button-CC"
+        "button button . ."
         ;
 }
 
-.concept__button__cc {
-    grid-area: button-CC;
+.concept__button {
+    grid-area: button;
     width: auto;
     border: 3px solid var(--brand-secondary);
     text-align: center;
     padding-top: 0.6rem;
     padding-bottom: 0.6rem;
-    background-color: #000;
-    color: var(--brand-third);
-}
-
-.concept__button__jc {
-    grid-area: button-JC;
-    width: auto;
-    border: 3px solid var(--brand-secondary);
-    text-align: center;
-    padding-top: 0.6rem;
-    padding-bottom: 0.6rem;
-    background-color: #000;
+    background-color: var(--brand-fourth);
     color: var(--brand-third);
 }
 
@@ -466,19 +467,91 @@ header {
     margin-bottom: 2rem;
 }
 
+/* news */
+
+.latest-news {
+    display: flex;
+}
+
+.latest-news__contains {
+    width: 100%;
+    height: 23rem;
+    background-image: url(../images/exterior.png);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.latest-news__headline-news {
+    background-color: rgb(22, 22, 22, 50%);
+    width: 6.3rem;
+    color: white;
+    font-size: 1.9em;
+    margin: 1rem;
+    padding: 0.3rem;
+}
+
+.latest-news__headline-text {
+    background-color: rgb(22, 22, 22, 50%);
+    width: 16rem;
+    color: white;
+    font-size: 1.5em;
+    margin: 12rem 0 0 1rem;
+    padding: 0.3rem;
+}
+
+.latest-news__headline {
+    background-color: rgb(22, 22, 22, 50%);
+    width: 22rem;
+    color: white;
+    margin: 0.5rem 0 0 1rem;
+    padding: 0.3rem;
+    font-size: 3em;
+}
+
+.news {
+    display: grid;
+    margin: 2rem 8vw;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "caption caption caption caption"
+    "text text text text"
+    "image image image image";
+}
+
+.news__heading {
+    grid-area: caption;
+    border-bottom: 3px solid var(--brand-secondary);
+    color: #fff;
+    margin: 1rem 0;
+    padding: 0 0 0.3rem 0;
+}
+
+.news__text {
+    grid-area: text;
+    color: #fff;
+    margin: 0 0 1rem 0;
+}
+
+.news__image {
+    grid-area: image;
+    width: 100%;
+}
+
 
 
 /* Contact */
 .contact-container {
     display: grid;
-    grid-template-columns: 8vw 1fr 1fr 8vw;
+    margin: 0 8vw;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas:
-        ". hours hours ."
-        ". mail mail ."
-        ". some some ."
-        ". call call ."
-        ". location location .";
+        "hours hours"
+        "mail mail"
+        "some some"
+        "call call"
+        "location location";
 }
 
 .contact__heading {
@@ -539,11 +612,11 @@ header {
     padding-bottom: 0.3rem;
     margin-bottom: 1rem;
     border: 2px solid var(--brand-third);
-    background-color: #0a0a0a;
+    background-color: var(--brand-fourth);
 }
 
 .contact-form input:active {
-    background-color: #0a0a0a;
+    background-color: var(--brand-fourth);
 }
 
 .contact-form textarea {
@@ -564,7 +637,7 @@ header {
 .contact-form button {
     align-self: center;
     margin: 1rem 0;
-    background-color: #0a0a0a;
+    background-color: var(--brand-fourth);
     padding-top: 0.4rem;
     padding-bottom: 0.4rem;
     text-transform: capitalize;
@@ -736,6 +809,81 @@ header {
     }
 }
 
+/* FOOTER */
+footer {
+    padding: 3rem 8vw 4rem 8vw;
+    background-color: var(--brand-fourth);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "hours hours hours hours"
+    "contact contact contact contact"
+    "some some some some";
+}
+
+.foot__container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "heading heading heading heading"
+    "text text text text" 
+    "icon icon icon icon";
+}
+
+.foot__heading {
+    font-size: 1.5em;
+    grid-area: heading;
+    color: var(--brand-third);
+    border-bottom: 3px solid var(--brand-secondary);
+    padding: 0 0 0.3rem 0;
+}
+
+.foot__text {
+    margin: 1rem 0;
+    line-height: 2;
+    grid-area: text;
+    color: var(--brand-third);
+}
+
+.link__foot-phone {
+    grid-area: text;
+}
+
+
+.link__foot-mail {
+    grid-area: icon;
+}
+
+.foot-icon {
+    width: 2rem;
+    margin-right: 1rem;
+}
+
+.foot__container__icon {
+    display: flex;
+    margin-top: 2rem;
+    align-items: center;
+    font-size: 1.1em;
+    color: var(--brand-third);
+}
+
+
+.foot__grid-area-hours {
+    grid-area: hours;
+}
+
+.foot__grid-area-contact {
+    grid-area: contact;
+    margin-top: 1rem;
+}
+.foot__grid-area-some {
+    grid-area: some;
+    margin-top: 2rem;
+}
+
 @media only screen and (min-width: 700px) {
     header {
         background-size: 100%;
@@ -787,14 +935,14 @@ header {
     /* Landing */
 
     .landing-sect-links {
-        grid-template-columns: 8vw 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 8vw;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-areas:
-            ". concept concept concept concept concept concept concept concept ."
-            ". news news news news news news news news ."
-            ". barista barista barista barista decor decor decor decor ."
-            ". gallery gallery gallery gallery gallery gallery gallery gallery ."
-            ". contact contact contact contact contact contact contact contact ."
-            ". location location location location location location location location .";
+            "concept concept concept concept concept concept concept concept"
+            "news news news news news news news news"
+            "barista barista barista barista decor decor decor decor"
+            "gallery gallery gallery gallery gallery gallery gallery gallery"
+            "contact contact contact contact contact contact contact contact"
+            "location location location location location location location location";
     }
 
 
@@ -844,12 +992,14 @@ header {
     /* Concept */
     .concept-container {
         display: grid;
-        grid-template-columns: 7vw 1fr 1fr 7vw;
+        grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
         grid-template-areas:
-            ". concept concept ."
-            ". coffee coffee ."
-            ". barista interior .";
+            "jc jc"
+            "cc cc"
+            "coffee coffee"
+            "divider divider"
+            "barista interior";
     }
 
     .concept--top {
@@ -879,19 +1029,18 @@ header {
         grid-template-areas:
             "heading heading heading heading image image image image"
             "text text text text image image image image"
-            "button-CC button-CC button-JC button-JC image image image image"
+            "button button . . image image image image"
             ". . . . image image image image";
     }
 
-    .concept__prices {}
-
-    .concept__button__link {
-        width: 90%;
-        text-align: center;
-        padding-top: 0.6rem;
-        padding-bottom: 0.6rem;
-    }
-
+    .concept__divider {
+        margin-bottom: 3rem;
+        display: block;
+        grid-area: divider;
+        background-color: var(--brand-secondary);
+        height: 3px;
+        width: 100%;
+        }
 
     .concept__image {
         grid-area: image;
@@ -948,18 +1097,33 @@ header {
         padding-right: 1rem;
     }
 
+    /* news */
+    
+    .news {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "caption caption caption caption . image image image"
+        "text text text text . image image image"
+        ". . . . . image image image";
+    }
+
+    .news__heading {
+        margin: 0 0 1rem 0;
+    }
+
     /* CONTACT */
     .contact-container {
         margin-top: 3rem;
         display: grid;
-        grid-template-columns: 8vw 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 8vw;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-rows: auto;
         grid-template-areas:
-            ". mail mail mail mail mail hours hours hours ."
-            ". mail mail mail mail mail . . . ."
-            ". some some some some some call call call ."
-            ". . . . . . call call call ."
-            ". location location location location location location location location .";
+            "mail mail mail mail mail hours hours hours"
+            "mail mail mail mail mail . . ."
+            "some some some some some call call call"
+            ". . . . . call call call"
+            "location location location location location location location location";
     } 
 
     .contact__open-hours {
@@ -1004,7 +1168,6 @@ header {
         grid-area: icon;
         display: flex;
         margin-top: 2rem;
-        align-items: left;
         font-size: 1.2em;
         color: var(--brand-third);
     }
@@ -1013,7 +1176,6 @@ header {
         width: 2.5rem;
         margin-right: 1rem;
     }
-    
     
     .contact__phone {
         grid-area: call;
@@ -1024,6 +1186,10 @@ header {
             "heading heading heading heading"
             "text text text text"
             "icon icon icon icon";
+    }
+
+    .contact__location {
+        margin: 5rem 0;
     }
 
 
@@ -1072,6 +1238,36 @@ header {
 .h-6{
     grid-row: span 3;
 } 
+/*FOOTER */
+
+footer {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "hours hours contact contact"
+    "hours hours some some"
+    "hours hours . ."
+    ;
+}
+
+.foot__container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "heading heading heading heading"
+    "text text text text" 
+    "icon icon icon icon";
+}
+.foot__grid-area-contact {
+    margin-top: 0;
+}
+.foot__grid-area-some {
+    grid-area: some;
+    margin-top: 2rem;
+}
+
+.foot__container__icon {
+    margin-top: 1rem;
+    font-size: 1.1em;
+}
 
 
 }
@@ -1082,13 +1278,12 @@ header {
         background-size: 100%;
         background-position: center 40%;
         height: 20rem;
-        justify-content: none;
         top: -10.5rem;
         display: block;
     }
 
     .nav-logo-link {
-        left: 15.5vw;
+        left: 14vw;
         top: 12rem;
         width: auto;
     }
@@ -1096,7 +1291,7 @@ header {
     .facebook-icon {
         position: absolute;
         left: auto;
-        right: 12vw;
+        right: 14vw;
         top: 16rem;
     }
 
@@ -1110,7 +1305,7 @@ header {
         margin: 0;
         width: auto;
         top: 16.5rem;
-        right: 16vw;
+        right: 17vw;
     }
 
     .nav-list-horizontal {
@@ -1135,13 +1330,14 @@ header {
 
 
     .landing-sect-links {
+        margin: 0 14vw;
         gap: 1.5rem;
-        grid-template-columns: 14vw 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 14vw;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-areas:
-            ". concept concept concept concept concept concept concept concept concept concept concept concept ."
-            ". news news news news barista barista barista barista decor decor decor decor ."
-            ". gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery ."
-            ". contact contact contact contact contact contact location location location location location location .";
+            "concept concept concept concept concept concept concept concept concept concept concept concept"
+            "news news news news barista barista barista barista decor decor decor decor"
+            "gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery"
+            "contact contact contact contact contact contact location location location location location location";
     }
 
 
@@ -1200,29 +1396,20 @@ header {
     /* Concept */
 
     .concept {
-        width: 100%;
         margin-bottom: 4rem;
         gap: 1rem;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-rows: auto;
         grid-template-areas:
-            "heading heading heading heading image image image image"
-            "text text text text image image image image"
-            "button-CC button-JC . . image image image image"
-            ". . . . image image image image";
+            "heading heading heading heading . image image image"
+            "text text text text . image image image"
+            "button . . . . image image image"
+            ". . . . . image image image";
     }
 
-
-    .concept__button__link {
-        width: 75%;
-        text-align: center;
-        padding-top: 0.8rem;
-        padding-bottom: 0.8rem;
-        font-size: 1.4em;
-    }
     
-    .concept__button__link:hover {
+    .concept__button:hover {
         border: 3px solid var(--brand-secondary);
         background-color: var(--brand-secondary);
         color: var(--brand-third);
@@ -1239,8 +1426,9 @@ header {
 
 
     .concept-container {
-        grid-template-columns: 14vw 1fr 1fr 14vw;
-        padding: 0 1.2rem;
+        margin: 0 14vw;
+        grid-template-columns: 1fr 1fr;
+        padding: 0 0;
 
     }
 
@@ -1256,19 +1444,33 @@ header {
     .some__text--shorten {
         width: auto;
     }
+    /* news */
+
+    .latest-news__contains {
+        margin: 0 14vw;
+        background-position: center;
+    }
+
+    .news {
+        grid-template-areas: 
+        "caption caption caption caption caption . . . image image image"
+        "text text text text text . . . image image image"
+        ". . . . . . . image image image";
+        margin: 2rem 14vw;
+    }
 
     /* Contact */
     .contact-container {
-        margin-top: 3rem;
+        margin: 3rem 14vw;
         display: grid;
-        grid-template-columns: 15.6vw 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 15.6vw;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-rows: auto;
         grid-template-areas:
-            ". mail mail mail mail mail hours hours hours ."
-            ". mail mail mail mail mail . . . ."
-            ". some some some some some call call call ."
-            ". . . . . . call call call ."
-            ". location location location location location location location location .";
+            "mail mail mail mail mail hours hours hours"
+            "mail mail mail mail mail . . ."
+            "some some some some some call call call"
+            ". . . . . call call call"
+            "location location location location location location location location";
     } 
 
     .contact__form {
@@ -1283,10 +1485,14 @@ header {
     }
     
     .contact-form button:hover {
-    background-color: #000;
+    background-color: var(--brand-fourth);
     border: 2px solid var(--brand-secondary);
     cursor: pointer;
     transform: scale(1.01);
+}
+
+.contact__map {
+    height: 25rem;
 }
 
     /* Gallery */
@@ -1333,6 +1539,17 @@ header {
 .h-6{
     grid-row: span 6;
 } 
+
+/* FOOTER */ 
+footer {
+    padding: 3rem 14vw 4rem 14vw;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "hours hours contact contact"
+    "hours hours some some"
+    "hours hours . ."
+    ;
+}
 
 
 }
