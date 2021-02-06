@@ -9,6 +9,7 @@
     padding: 0;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-tap-highlight-color: transparent;
+    font-weight: normal;
 }
 
 /* width */
@@ -182,7 +183,6 @@ header {
 
 .landing-sect-links div h2 {
     color: var(--brand-third);
-    font-weight: normal;
     align-self: center;
     text-align: center;
     font-size: 1.9em;
@@ -191,7 +191,7 @@ header {
 .landing-sect-links p {
     color: var(--brand-third);
     text-align: center;
-    font-size: 1em;
+    font-size: 1.2em;
     position: absolute;
     margin-top: 13rem;
 }
@@ -275,7 +275,6 @@ header {
     align-self: center;
     text-align: center;
     font-size: 1.9em;
-    font-weight: normal;
     z-index: 5;
 }
 
@@ -423,14 +422,14 @@ header {
     color: var(--brand-third);
     margin: 1rem 0;
     padding-bottom: 0.3rem;
-    font-weight: normal;
+    font-size: 2em;
 }
 
 .concept__text {
     grid-area: text;
     color: var(--brand-third);
-    font-weight: normal;
     margin-bottom: 2rem;
+    font-size: 1em;
 }
 
 .concept--flipped {
@@ -458,14 +457,14 @@ header {
     color: var(--brand-third);
     margin: 1rem 0;
     padding-bottom: 0.3rem;
-    font-weight: normal;
+    font-size: 2em;
 }
 
 .concept__text-flipped {
     grid-area: text;
     color: var(--brand-third);
-    font-weight: normal;
     margin-bottom: 2rem;
+    font-size: 1em;
 }
 
 /* news */
@@ -487,7 +486,6 @@ header {
     width: 6.3rem;
     color: white;
     font-size: 1.2em;
-    font-weight: normal;
     margin: 1rem;
     padding: 0.3rem;
 }
@@ -497,9 +495,8 @@ header {
 .latest-news__headline-text {
     background-color: rgb(22, 22, 22, 50%);
     width: 16rem;
-    font-weight: normal;
     color: white;
-    font-size: 1.3em;
+    font-size: 1.2em;
     margin: 12rem 0 0 1rem;
     padding: 0.3rem;
 }
@@ -533,12 +530,14 @@ header {
     color: #fff;
     margin: 1rem 0;
     padding: 0 0 0.3rem 0;
+    font-size: 2em;
 }
 
 .news__text {
     grid-area: text;
     color: #fff;
     margin: 0 0 1rem 0;
+    font-size: 1em;
 }
 
 .news__image {
@@ -565,15 +564,16 @@ header {
 .contact__heading {
     grid-area: heading;
     color: var(--brand-third);
-    font-weight: normal;
     padding-bottom: 0.3rem;
     margin: 2rem 0 1rem 0;
     border-bottom: 3px solid var(--brand-secondary);
+    font-size: 2em;
 }
 
 .contact__text {
     grid-area: text;
     color: var(--brand-third);
+    font-size: 1em;
 }
 
 .contact__open-hours {
@@ -709,7 +709,7 @@ header {
     display: flex;
     margin-top: 2rem;
     align-items: center;
-    font-size: 1.2em;
+    font-size: 1.5em;
     color: var(--brand-third);
 }
 
@@ -766,7 +766,6 @@ height: calc(100vh - 23rem);
     margin: 4rem 0;
     color: var(--brand-third);
     text-align: center;
-    font-weight: normal;
 }
 
 .submitted-text {
@@ -859,7 +858,7 @@ footer {
 }
 
 .foot__heading {
-    font-size: 1.5em;
+    font-size: 2em;
     grid-area: heading;
     color: var(--brand-third);
     border-bottom: 3px solid var(--brand-secondary);
@@ -871,6 +870,7 @@ footer {
     line-height: 2;
     grid-area: text;
     color: var(--brand-third);
+    font-size: 1em;
 }
 
 .link__foot-phone {
@@ -891,7 +891,7 @@ footer {
     display: flex;
     margin-top: 2rem;
     align-items: center;
-    font-size: 1.1em;
+    font-size: 1em;
     color: var(--brand-third);
 }
 
@@ -908,6 +908,26 @@ footer {
     grid-area: some;
     margin-top: 2rem;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media only screen and (min-width: 700px) {
     header {
@@ -954,7 +974,7 @@ footer {
     .nav-list-horizontal a {
         text-decoration: none;
         color: var(--brand-third);
-        font-size: 1.3em;
+        font-size: 1.5em;
     }
 
 
@@ -979,7 +999,7 @@ footer {
     }
 
     .landing-sect-links p {
-        font-size: 1.4em;
+        font-size: 1.5em;
         margin-top: 17.5rem;
     }
 
@@ -1080,13 +1100,13 @@ footer {
         color: var(--brand-third);
         margin: 0;
         padding-bottom: 0.2rem;
-        font-weight: normal;
+        font-size: 2em;
     }
 
     .concept__text {
         grid-area: text;
         color: var(--brand-third);
-        font-weight: normal;
+        font-size: 1em;
     }
 
     .concept--flipped {
@@ -1114,14 +1134,14 @@ footer {
         color: var(--brand-third);
         margin: 1rem 0;
         padding-bottom: 0.3rem;
-        font-weight: normal;
+        font-size: 2em;
     }
 
     .concept__text-flipped {
         grid-area: text;
         color: var(--brand-third);
-        font-weight: normal;
         padding-right: 1rem;
+        font-size: 1em;
     }
 
     /* news */
@@ -1137,6 +1157,11 @@ footer {
 
     .news__heading {
         margin: 0 0 1rem 0;
+        font-size: 2em;
+    }
+
+    .news__text {
+        font-size: 1em;
     }
 
     /* CONTACT */
@@ -1195,7 +1220,7 @@ footer {
         grid-area: icon;
         display: flex;
         margin-top: 2rem;
-        font-size: 1.2em;
+        font-size: 1.5em;
         color: var(--brand-third);
     }
     
@@ -1298,7 +1323,7 @@ footer {
 
 .foot__container__icon {
     margin-top: 1rem;
-    font-size: 1.1em;
+    font-size: 1em;
 }
 
 
@@ -1350,7 +1375,7 @@ footer {
     .nav-list-horizontal a {
         text-decoration: none;
         color: #fff;
-        font-size: 1.8em;
+        font-size: 1.9em;
         margin: 0 1rem;
     }
 
@@ -1451,11 +1476,11 @@ footer {
     }
 
     .concept__headline {
-        font-size: 2.2em;
+        font-size: 2.5em;
     }
 
     .concept__text {
-        font-size: 1.15em;
+        font-size: 1.2em;
     }
 
 
@@ -1466,16 +1491,16 @@ footer {
 
     }
 
-    .concept__headline--flipped {
-        font-size: 2.2em;
+    .concept__headline-flipped {
+        font-size: 2.5em;
 
     }
 
-    .concept__text--flipped {
-        font-size: 1.15em;
+    .concept__text-flipped {
+        font-size: 1.2em;
     }
 
-    .some__text--shorten {
+    .some__text-shorten {
         width: auto;
     }
     /* news */
@@ -1491,6 +1516,14 @@ footer {
         "text text text text text . . . image image image"
         ". . . . . . . image image image";
         margin: 2rem 14vw;
+    }
+
+    .news__heading {
+        font-size: 2.5em;
+    }
+
+    .news__text {
+        font-size: 1.2em;
     }
 
     /* Contact */
@@ -1523,6 +1556,14 @@ footer {
     border: 2px solid var(--brand-secondary);
     cursor: pointer;
     transform: scale(1.01);
+}
+
+.contact__heading {
+    font-size: 2.5em;
+}
+
+.contact__text {
+    font-size: 1.2em;
 }
 
 .contact__map {
