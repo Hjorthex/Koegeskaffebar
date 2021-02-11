@@ -349,13 +349,14 @@ header {
 /* Concept */
 .concept-container {
     display: grid;
-    margin: 0 8vw;
+    margin: 1rem 8vw;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas:
+        "coffee coffee"
+        "machine machine"
         "jc jc"
         "cc cc"
-        "coffee coffee"
         "barista barista"
         "interior interior";
 }
@@ -364,17 +365,19 @@ header {
 }
 
 .concept-jc {
-    margin-top: 1rem;
     grid-area: jc;
 }
 
 .concept-cc {
-    margin-top: 2rem;
     grid-area: cc;
 }
 
 .concept-coffee {
     grid-area: coffee;
+}
+
+.concept-machine {
+    grid-area: machine;
 }
 
 .concept-flipped-mid {
@@ -574,6 +577,13 @@ header {
     grid-area: text;
     color: var(--brand-third);
     font-size: 1em;
+}
+.contact__text__hours {
+    padding-left: 1rem;
+}
+.text__container {
+    display: flex;
+    flex-direction: row;
 }
 
 .contact__open-hours {
@@ -867,10 +877,19 @@ footer {
 
 .foot__text {
     margin: 1rem 0;
-    line-height: 2;
     grid-area: text;
+    width: 100%;
+}
+
+.foot__hours, .foot__days {
     color: var(--brand-third);
     font-size: 1em;
+    line-height: 2;
+}
+
+.foot__hours {
+    padding-left: 1rem;
+    width: 10rem;
 }
 
 .link__foot-phone {
@@ -966,7 +985,7 @@ footer {
         display: flex;
         list-style: none;
         justify-content: space-between;
-        width: 60%;
+        width: 65%;
         margin: 0 auto 0 auto;
 
     }
@@ -1038,13 +1057,15 @@ footer {
 
     /* Concept */
     .concept-container {
+        padding-top: 1rem;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
         grid-template-areas:
+            "coffee coffee"
+            "machine machine"
             "jc jc"
             "cc cc"
-            "coffee coffee"
             "divider divider"
             "barista interior";
     }
@@ -1325,8 +1346,6 @@ footer {
     margin-top: 1rem;
     font-size: 1em;
 }
-
-
 }
 
 
@@ -1485,7 +1504,7 @@ footer {
 
 
     .concept-container {
-        margin: 0 14vw;
+        margin: 1rem 14vw;
         grid-template-columns: 1fr 1fr;
         padding: 0 0;
 
@@ -1630,6 +1649,15 @@ footer {
     "hours hours . ."
     ;
 }
+.foot__hours, .foot__days {
+    color: var(--brand-third);
+    font-size: 1em;
+    line-height: 2;
+}
 
+.foot__hours {
+    padding-left: 1rem;
+    width: auto;
+}
 
 }
